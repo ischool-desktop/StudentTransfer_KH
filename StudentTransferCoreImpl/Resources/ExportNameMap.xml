@@ -1,0 +1,39 @@
+﻿<Fields>
+    <!--這個對照表是用於匯出 Excel 時用的-->
+    <Field Pattern="EnglishName" Chinese="英文姓名"/>
+    <Field Pattern="BirthPlace" Chinese="出生地"/>
+    <Field Pattern="PermanentAddress/AddressList/Address[1]" Chinese="戶籍地址" DataParser="Address"/>
+    <Field Pattern="MailingAddress/AddressList/Address[1]" Chinese="聯絡地址" DataParser="Address"/>
+    <Field Pattern="OtherAddress/AddressList/Address[1]" Chinese="其他地址1" DataParser="Address"/>
+    <Field Pattern="OtherAddress/AddressList/Address[2]" Chinese="其他地址2" DataParser="Address"/>
+    <Field Pattern="OtherAddress/AddressList/Address[3]" Chinese="其他地址3" DataParser="Address"/>
+    <Field Pattern="Nationality" Chinese="國籍"/>
+    <Field Pattern="Email" Chinese="Email"/>
+    <Field Pattern="FatherName" Chinese="父親姓名"/>
+    <Field Pattern="FatherLiving" Chinese="父親存歿" DataParser="Living"/>
+    <Field Pattern="FatherNationality" Chinese="父親國籍"/>
+    <Field Pattern="FatherOtherInfo/FatherOtherInfo/FatherEducationDegree" Chinese="父親最高學歷"/>
+    <Field Pattern="FatherOtherInfo/FatherOtherInfo/FatherJob" Chinese="父親職業"/>
+    <Field Pattern="FatherOtherInfo/FatherOtherInfo/Phone" Chinese="父親電話"/>
+    <Field Pattern="MotherName" Chinese="母親姓名"/>
+    <Field Pattern="MotherLiving" Chinese="母親存歿" DataParser="Living"/>
+    <Field Pattern="MotherNationality" Chinese="母親國籍"/>
+    <Field Pattern="MotherOtherInfo/MotherOtherInfo/MotherEducationDegree" Chinese="母親最高學歷"/>
+    <Field Pattern="MotherOtherInfo/MotherOtherInfo/MotherJob" Chinese="母親職業"/>
+    <Field Pattern="MotherOtherInfo/MotherOtherInfo/Phone" Chinese="母親電話"/>
+    <Field Pattern="CustodianName" Chinese="監護人姓名"/>
+    <Field Pattern="CustodianNationality" Chinese="監護人國籍"/>
+    <Field Pattern="CustodianRelationship" Chinese="監護人關係"/>
+    <Field Pattern="CustodianOtherInfo/CustodianOtherInfo/EducationDegree" Chinese="監護人最高學歷"/>
+    <Field Pattern="CustodianOtherInfo/CustodianOtherInfo/Job" Chinese="監護人職業"/>
+    <Field Pattern="CustodianOtherInfo/CustodianOtherInfo/Phone" Chinese="監護人電話"/>
+    <Field Pattern="PermanentPhone" Chinese="戶籍電話"/>
+    <Field Pattern="ContactPhone" Chinese="聯絡電話"/>
+    <Field Pattern="OtherPhones/PhoneList/PhoneNumber[1]" Chinese="其他電話1"/>
+    <Field Pattern="OtherPhones/PhoneList/PhoneNumber[2]" Chinese="其他電話2"/>
+    <Field Pattern="OtherPhones/PhoneList/PhoneNumber[3]" Chinese="其他電話3"/>
+    <Field Pattern="SMSPhone" Chinese="手機"/>
+    <Field Pattern="CustodianIDNumber" Chinese="監護人身分證號"/>
+    <Field Pattern="FatherIDNumber" Chinese="父親身分證號"/>
+    <Field Pattern="MotherIDNnumber" Chinese="母親身分證號"/>
+</Fields>

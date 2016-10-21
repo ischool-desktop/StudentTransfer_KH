@@ -1,0 +1,43 @@
+﻿<OptionList>
+    <Options Name="學生身份註記">
+        <Item>一般學生</Item>
+        <Item>本人身障</Item>
+        <Item>家長身障</Item>
+        <Item>低收入戶</Item>
+        <Item>大陸來台依親者</Item>
+        <Item>功勳子女</Item>
+        <Item>海外僑生</Item>
+        <Item>港澳生</Item>
+        <Item>邊疆生</Item>
+        <Item>原住民</Item>
+        <Item>外籍生</Item>
+        <Item>資優生</Item>
+        <Item>派外人員子女</Item>
+        <Item>體育績優</Item>
+        <Item>顏面傷殘</Item>
+        <Item>教職員子女</Item>
+        <Item>公教遺族-因公</Item>
+        <Item>公教遺族-因病</Item>
+        <Item>單親</Item>
+        <Item>雙親</Item>
+        <Item>失親</Item>
+        <Item>其他</Item>
+    </Options>
+    <Options Name="原住民族別">
+        <Item>無</Item>
+        <Item>阿美族</Item>
+        <Item>泰雅族</Item>
+        <Item>排灣族</Item>
+        <Item>布農族</Item>
+        <Item>卑南族</Item>
+        <Item>魯凱族</Item>
+        <Item>鄒族</Item>
+        <Item>賽夏族</Item>
+        <Item>雅美族</Item>
+        <Item>邵族</Item>
+        <Item>葛瑪蘭族</Item>
+        <Item>太魯閣族</Item>
+        <Item>撒奇萊雅族</Item>
+        <Item>其他</Item>
+    </Options>
+</OptionList>

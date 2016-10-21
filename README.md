@@ -1,0 +1,40 @@
+StudentTransfer
+===============
+
+學生線上轉學模組
+
+============= 新竹專用數位學生證資料庫同步 DSA Service 規格 =============<br/>
+	轉出<br/>
+http://163.19.149.20/iccard/ws/trans.asmx?op=tOut<br/>
+&lt;Request&gt;
+ &lt;Name&gt;name&lt;/Name&gt;
+	&lt;StudentID&gt;std_id&lt;/StudentID&gt;
+	&lt;TargetSchool&gt;to_sch&lt;/TargetSchool&gt;
+	&lt;Writer&gt;write_id&lt;/Writer&gt;
+	&lt;Birthday&gt;birthday&lt;/Birthday&gt;
+&lt;/Request&gt;<br/>
+<br/>
+轉入<br/>
+http://163.19.149.20/iccard/ws/trans.asmx?op=tIn<br/>
+&lt;Request&gt;
+	&lt;TargetSchool&gt;to_sch&lt;/TargetSchool&gt;
+	&lt;Writer&gt;write_id&lt;/Writer&gt;
+	&lt;StudentID&gt;std_id&lt;/StudentID&gt;
+	&lt;StudentNumber&gt;std_no&lt;/StudentNumber&gt;
+	&lt;Grade&gt;sGrade&lt;/Grade&gt;
+	&lt;ClassName&gt;sClass&lt;/ClassName&gt;
+&lt;/Request&gt;<br/>
+<br/>
+外縣轉入<br/>
+http://163.19.149.20/iccard/ws/trans.asmx?op=tForeignIn<br/>
+&lt;Request&gt;
+	&lt;SourceSchool&gt;from_sch&lt;/SourceSchool&gt;
+	&lt;TargetSchool&gt;to_sch&lt;/TargetSchool&gt;
+	&lt;Writer&gt;write_id&lt;/Writer&gt;
+	&lt;StudentID&gt;std_id&lt;/StudentID&gt;
+	&lt;Name&gt;name&lt;/Name&gt;
+	&lt;StudentNumber&gt;std_no&lt;/StudentNumber&gt;
+	&lt;Grade&gt;sGrade&lt;/Grade&gt;
+	&lt;ClassName&gt;sClass&lt;/ClassName&gt;
+	&lt;Birthday&gt;birthday&lt;/Birthday&gt;
+&lt;/Request&gt;

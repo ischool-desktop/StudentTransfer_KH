@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCBCF0F1-35B1-48CA-90AA-A3042FBF3021}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StudentTransferCoreImpl</RootNamespace>
+    <AssemblyName>StudentTransferCoreImpl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\StudentTransferAPI\Library\Aspose.Cells.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\StudentTransferAPI\Library\Aspose.Words.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Campus.Configuration">
+      <HintPath>..\StudentTransferAPI\Library\Campus.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=9.5.0.1, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\FiscaRuntime\FiscaAE\components\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="FISCA">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Authentication">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.Authentication.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Core">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Data">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Deployment">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.Deployment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.DSAClient">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.DSAClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.LogAgent">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.LogAgent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Permission">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.Permission.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.Presentation">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FISCA.UDT">
+      <HintPath>..\StudentTransferAPI\Library\FISCA.UDT.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Data">
+      <HintPath>..\StudentTransferAPI\Library\K12.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="K12.Presentation">
+      <HintPath>..\StudentTransferAPI\Library\K12.Presentation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardDataSync\JHSchoolSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardDataSync\JHSchoolSelector.Designer.cs">
+      <DependentUpon>JHSchoolSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardDataSync\ManualSync.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardDataSync\ManualSync.Designer.cs">
+      <DependentUpon>ManualSync.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DALTransfer.cs" />
+    <Compile Include="DGValueManager.cs" />
+    <Compile Include="ExamScoreEntity.cs" />
+    <Compile Include="ExportToExcel.cs" />
+    <Compile Include="ExportToXml.cs" />
+    <Compile Include="GetJHSchoolNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetJHSchoolNames.designer.cs">
+      <DependentUpon>GetJHSchoolNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\FitnessRecord.cs" />
+    <Compile Include="Processors\ProcessorBase.cs" />
+    <Compile Include="Processors\SemesterHistory.cs" />
+    <Compile Include="Processors\SemesterScore.cs" />
+    <Compile Include="Processors\ServiceLearningRecord.cs" />
+    <Compile Include="Processors\StudentComplete.cs" />
+    <Compile Include="Processors\SemesterMoralScore.cs" />
+    <Compile Include="Processors\MoralScoreDetail.cs" />
+    <Compile Include="Processors\TheCadreRecord.cs" />
+    <Compile Include="Processors\UDT\SchoolObject.cs" />
+    <Compile Include="Processors\UDT\SLRecord.cs" />
+    <Compile Include="Processors\UDT\StudentFitnessRecord.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Schema.cs" />
+    <Compile Include="SemesterData.cs" />
+    <Compile Include="TokenGenerator.cs" />
+    <Compile Include="TransferForms\StatusUIController.cs" />
+    <Compile Include="TransferForms\TransferInStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForms\TransferInStatus.Designer.cs">
+      <DependentUpon>TransferInStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferInRequire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferInRequire.Designer.cs">
+      <DependentUpon>TransferInRequire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\AddTransStudCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferIn\AddTransStudCourse.designer.cs">
+      <DependentUpon>AddTransStudCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\AddTransStudCourseScore.cs" />
+    <Compile Include="TransferIn\AddTransStudCourseScore.designer.cs">
+      <DependentUpon>AddTransStudCourseScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\AttendCourseEntity.cs" />
+    <Compile Include="TransferIn\ImportDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferIn\ImportDataForm.Designer.cs">
+      <DependentUpon>ImportDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\ImportDataOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferIn\ImportDataOptions.Designer.cs">
+      <DependentUpon>ImportDataOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\StudentBrief.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferIn\StudentBrief.Designer.cs">
+      <DependentUpon>StudentBrief.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\UpdateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferIn\UpdateRecord.Designer.cs">
+      <DependentUpon>UpdateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferIn\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferIn\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferOutReport.cs" />
+    <Compile Include="TransferOut\FinalStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferOut\FinalStep.Designer.cs">
+      <DependentUpon>FinalStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consts.cs" />
+    <Compile Include="TransferOut\ExportDataOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferOut\ExportDataOptions.Designer.cs">
+      <DependentUpon>ExportDataOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferOut\GenerateData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferOut\GenerateData.Designer.cs">
+      <DependentUpon>GenerateData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Processors\StudentBrief.cs" />
+    <Compile Include="TransferOut\StudentTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferOut\StudentTag.Designer.cs">
+      <DependentUpon>StudentTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferOut\UpdateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferOut\UpdateRecord.Designer.cs">
+      <DependentUpon>UpdateRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferOut\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferOut\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferForms\StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForms\StatusForm.Designer.cs">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransferForms\TransferOutStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferForms\TransferOutStatus.Designer.cs">
+      <DependentUpon>TransferOutStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateHelper.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="XElementHelper.cs" />
+    <Compile Include="XmlObject.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentTransferAPI\StudentTransferAPI.csproj">
+      <Project>{C95AA04F-0732-4D6C-B1F6-CDD26034E6F1}</Project>
+      <Name>StudentTransferAPI</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CardDataSync\JHSchoolSelector.resx">
+      <DependentUpon>JHSchoolSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardDataSync\ManualSync.resx">
+      <DependentUpon>ManualSync.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetJHSchoolNames.resx">
+      <DependentUpon>GetJHSchoolNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferForms\TransferInStatus.resx">
+      <DependentUpon>TransferInStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferInRequire.resx">
+      <DependentUpon>TransferInRequire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\AddTransStudCourse.resx">
+      <DependentUpon>AddTransStudCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\AddTransStudCourseScore.resx">
+      <DependentUpon>AddTransStudCourseScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\ImportDataForm.resx">
+      <DependentUpon>ImportDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\ImportDataOptions.resx">
+      <DependentUpon>ImportDataOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\StudentBrief.resx">
+      <DependentUpon>StudentBrief.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\UpdateRecord.resx">
+      <DependentUpon>UpdateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferIn\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferOut\FinalStep.resx">
+      <DependentUpon>FinalStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferOut\ExportDataOptions.resx">
+      <DependentUpon>ExportDataOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferOut\GenerateData.resx">
+      <DependentUpon>GenerateData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferOut\StudentTag.resx">
+      <DependentUpon>StudentTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferOut\UpdateRecord.resx">
+      <DependentUpon>UpdateRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferOut\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferForms\StatusForm.resx">
+      <DependentUpon>StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferForms\TransferOutStatus.resx">
+      <DependentUpon>TransferOutStatus.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jh.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\綜合資料轉移單.doc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eh.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%28轉入轉出確認layers_ok_64.png" />
+    <None Include="Resources\%28轉出%29image_size_up_64.png" />
+    <None Include="Resources\%28轉入%29mask_add_64.png" />
+    <Content Include="Resources\ExportNameMap.xml" />
+    <Content Include="Resources\live_update_up_128.png" />
+    <Content Include="Resources\Options.xml" />
+    <Content Include="Resources\StudentFields.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
