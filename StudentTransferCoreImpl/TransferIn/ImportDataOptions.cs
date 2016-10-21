@@ -93,8 +93,12 @@ namespace StudentTransferCoreImpl.TransferIn
                 {
                     if (each.IsNewRow) continue;
 
-                    TransferProcessor tp = each.Tag as TransferProcessor;
-                    processors.Add(tp);
+                    //2016/10/21 穎驊新增，現在勾選選項 會正確地決定轉入校要不要匯此項資料
+                    if (Convert.ToBoolean(each.Cells[0].Value))                     
+                    {
+                        TransferProcessor tp = each.Tag as TransferProcessor;
+                        processors.Add(tp);                    
+                    }                    
                 }
                 Arguments[Consts.SelectedProcessor] = processors;
 

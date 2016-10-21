@@ -248,6 +248,11 @@ namespace StudentTransferCoreImpl
             TransferProcessor.Register(new StudentTransferCoreImpl.Processors.TheCadreRecord());
             TransferProcessor.Register(new StudentTransferCoreImpl.Processors.ServiceLearningRecord());
             TransferProcessor.Register(new StudentTransferCoreImpl.Processors.FitnessRecord());
+
+            //2016/10/21 穎驊新增 高關懷、社團資料 資料可轉出轉入
+            TransferProcessor.Register(new StudentTransferCoreImpl.Processors.HighConcernRecord());
+            TransferProcessor.Register(new StudentTransferCoreImpl.Processors.AssociationRecord());
+
             #endregion
 
             //檢查是否有需要使用者確認的狀態

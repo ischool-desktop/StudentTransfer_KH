@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using FISCA.Data;
 using System.Xml.Linq;
+using FISCA.DSAClient;
 
 namespace StudentTransferCoreImpl
 {
@@ -85,5 +86,65 @@ namespace StudentTransferCoreImpl
 
             return AttendancePeriodList;
         }
+
+
+        //2016/10/20 穎驊註解，下面SendData()方法是自專案"KH_HighConcern" Copy過來直接用
+
+        /// <summary>
+        /// 將高關懷的學生資料傳回去給局端
+        /// </summary>
+        /// <returns></returns>
+
+        public static string SendData(string action, string IDNumber, string StudentNumber, string StudentName, string ClassName, string SeatNo, string DocNo, string NumberReduce, string EDoc)
+        {
+            string DSNS = FISCA.Authentication.DSAServices.AccessPoint;
+
+            string AccessPoint = @"j.kh.edu.tw";
+
+            if (FISCA.RTContext.IsDiagMode)
+            {
+                string accPoint = FISCA.RTContext.GetConstant("KH_AccessPoint");
+                if (!string.IsNullOrEmpty(accPoint))
+                    AccessPoint = accPoint;
+            }
+
+            string Contract = "log";
+            string ServiceName = "_.InsertLog";
+
+            string errMsg = "";
+            try
+            {
+
+                XElement xmlRoot = new XElement("Request");
+                XElement s1 = new XElement("SchoolLog");
+                XElement s2 = new XElement("Field");
+
+                s2.SetElementValue("DSNS", DSNS);
+                s2.SetElementValue("Action", action);
+                XElement Content = new XElement("Content");
+                Content.SetElementValue("IDNumber", IDNumber);
+                Content.SetElementValue("StudentNumber", StudentNumber);
+                Content.SetElementValue("StudentName", StudentName);
+                Content.SetElementValue("ClassName", ClassName);
+                Content.SetElementValue("SeatNo", SeatNo);
+                Content.SetElementValue("NumberReduce", NumberReduce);
+                Content.SetElementValue("DocNo", DocNo);
+                Content.SetElementValue("EDoc", EDoc);
+                s2.Add(Content);
+                s1.Add(s2);
+                xmlRoot.Add(s1);
+                XmlHelper reqXML = new XmlHelper(xmlRoot.ToString());
+                FISCA.DSAClient.Connection cn = new FISCA.DSAClient.Connection();
+                cn.Connect(AccessPoint, Contract, DSNS, DSNS);
+                Envelope rsp = cn.SendRequest(ServiceName, new Envelope(reqXML));
+                XElement rspXML = XElement.Parse(rsp.XmlString);
+            }
+            catch (Exception ex) { errMsg = ex.Message; }
+
+            return errMsg;
+        }
+
+
+
     }
 }

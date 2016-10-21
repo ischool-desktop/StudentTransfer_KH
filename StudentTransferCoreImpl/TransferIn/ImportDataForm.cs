@@ -61,8 +61,7 @@ namespace StudentTransferCoreImpl.TransferIn
                 //將學生改為一般狀態。
                 StudentRecord sr = Student.SelectByID(Arguments[Consts.StudentID] + "");
                 sr.Status = StudentRecord.StudentStatus.一般;
-                Student.Update(sr);
-
+                Student.Update(sr);          
                 lblGenerateXmlDesc.Text = "匯入完成。";
                 cp1.IsRunning = false;
                 cp1.Value = 100;
