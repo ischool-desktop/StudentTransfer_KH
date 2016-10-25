@@ -84,18 +84,20 @@ namespace StudentTransferCoreImpl.Processors
 
             try
             {
-                StudentAssociationRecord NewRec = new StudentAssociationRecord();
+                
 
                 // 讀取資料
                 foreach (XElement elm in data.Elements())
                 {
-                    
+
+                    StudentAssociationRecord NewRec = new StudentAssociationRecord();
+
                     NewRec.StudentID = StudentId;                    
                     NewRec.SchoolYear = elm.Element("SchoolYear").Value;
                     NewRec.Semester = elm.Element("Semester").Value;
                     NewRec.Scores = elm.Element("Scores").Value;
                     
-                    StudentAssociationRecordList.Add(NewRec);
+                    StudentAssociationRecordList.Add(NewRec);                    
                 }
 
                 // 先刪除舊資料
@@ -104,6 +106,8 @@ namespace StudentTransferCoreImpl.Processors
 
                 // 儲存資料
                 StudentAssociationRecordList.SaveAll();
+
+      
 
 
             }
